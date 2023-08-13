@@ -1,4 +1,4 @@
-![Design preview](./public/screen-project-readme.jpg)
+![Design preview](./public/project-screen-readme.jpg)
 
 # Getting Started Simple Slider with Create React App
 
