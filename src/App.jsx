@@ -1,19 +1,29 @@
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import images from './images';
 
 function App() {
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
+
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    // return () => {
+    //   effect
+    // };
+  }, []);
   return (
     <div className="App">
-      <motion.div className="carousel">
+      <motion.div ref={carousel} className="carousel">
         <motion.div
           drag="x"
-          dragConstraints={{ right: 0 }}
+          dragConstraints={{ right: 0, left: -width }}
           className="carousel-inner"
         >
           {images.map((img, index) => {
             return (
               <motion.div className="item">
-                <img src={img} alt={`slider item ${index}`} />
+                <img src={img} alt={`slider item ${index}`} key={index} />
               </motion.div>
             );
           })}
