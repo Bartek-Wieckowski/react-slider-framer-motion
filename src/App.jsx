@@ -8,9 +8,6 @@ function App() {
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-    // return () => {
-    //   effect
-    // };
   }, []);
   return (
     <div className="App">
