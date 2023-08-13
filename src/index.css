@@ -27,9 +27,7 @@ code {
 .carousel {
   cursor: grab;
   overflow: hidden;
-  background-color: lightseagreen;
 }
 .carousel-inner {
   display: flex;
-  background-color: tomato;
 }
