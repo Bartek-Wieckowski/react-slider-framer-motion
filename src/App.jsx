@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <motion.div className="carousel">
-        <motion.div className="carousel-inner">
+        <motion.div drag="x" className="carousel-inner">
           {images.map((img, index) => {
             return (
               <motion.div className="item">
